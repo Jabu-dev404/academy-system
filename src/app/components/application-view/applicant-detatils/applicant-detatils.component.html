@@ -1,0 +1,14 @@
+<!-- <h1>{{selectedStudent.name + " " + selectedStudent.surname}}</h1> -->
+
+ <div id="box">
+    <header id="header">
+        <h2>Application details</h2>
+    </header>
+
+    <span>Name          </span> <p>>{{selectedStudent.name}}</p>
+    <span>Surname       </span><p>{{selectedStudent.surname}}</p>
+    <span>Date 0f Birth: </span><P>{{selectedStudent.dOB}}</P>
+    <button (click)="accept()">Accept</button>
+    <button (click)="decline()">Decline</button>
+    <button (click)="cancel()">Cancel</button>
+ </div>

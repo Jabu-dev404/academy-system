@@ -1,0 +1,26 @@
+#options-box {
+    width: 400px;
+    height: 200px;
+    border: solid wheat;
+    margin-top: 130px;
+}
+
+#option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: solid maroon;
+}
+
+#choosen-option-box {
+    width: 1100px;
+    height: 300px;
+    border: solid wheat;
+    margin-left: 600px;
+    margin-top: -150px;
+}
+
+header {
+    color: black;
+}

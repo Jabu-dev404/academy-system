@@ -1,0 +1,23 @@
+#form-box {
+    width: 100%;
+    height: 600px;
+    border: solid grey;
+   
+}
+
+ ::placeholder {
+    text-align: center;
+    text-decoration: wavy;
+    text-transform: lowercase;
+ }
+  label {
+    color: black;
+  }
+
+  #form-header {
+    margin-left: 400px;
+  }
+
+  #file {
+    color: black;
+  }

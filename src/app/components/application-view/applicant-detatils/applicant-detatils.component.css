@@ -1,0 +1,25 @@
+#box {
+    width: 400px;
+    height: 500px;
+    border: solid maroon;
+    margin-left: 600px;
+    margin-top: -190px;
+    background-color:  #FDFAF6;
+    border: solid  wheat;
+    border-radius: 30px;
+}
+
+#header {
+    color: black;
+}
+
+span {
+    font-weight: bold;
+    color: black;
+    margin-left: 150px;
+}
+
+p{
+    color: black;
+    margin-left: 150px;
+}

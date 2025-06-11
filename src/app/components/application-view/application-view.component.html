@@ -1,0 +1,19 @@
+ 
+
+ <div id="box">
+    <header id="header">
+    <h2>Applications</h2>
+ </header>
+
+ @if(applications.length === 0) {
+    <p>There are no applications</p>
+ } @else { 
+     @for(application of applications ; track application.id){
+      <div id="student"> <span>Name: </span>{{  application.name}} <span>    surname</span> {{application.surname}} 
+         <button (click)="onClick(application)">view</button>
+      </div>
+     }
+ }
+ </div>
+ <router-outlet />
+ 

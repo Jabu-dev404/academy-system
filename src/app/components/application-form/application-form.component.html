@@ -1,0 +1,28 @@
+<div id="form-box">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <p  id="form-header"><label><h2>Application form</h2></label></p>
+       
+        <input type="text" placeholder="name" id="" formControlName = "name"/>
+        <input type="text" placeholder="surname" formControlName = "surname"/>
+        <label for="male">male</label>
+        <input type="radio" placeholder="gender" value="male" name="gender" formControlName = "gender"/>
+        <label for="male">female</label>
+        <input type="radio" placeholder="gender" value="female" name="gender" formControlName = "gender"/>
+        <input type="date" placeholder="date-of-birth" formControlName = "date"/>
+        <input type="text" placeholder="id-number" pattern="[0-9]" formControlName = "idNumber"/>
+        <input type="tel" placeholder="cell-phone-number" formControlName = "cellPhoneNo"/> 
+        <input type="email" placeholder="email-address" formControlName = "emailAddress" />
+        <input type="text" placeholder="street-name" formControlName = "streetName"/>
+        <input type="text" placeholder="house-number" formControlName = "houseNumber"/>
+        <input type="text" placeholder="postal-code" formControlName = "postalCode"/>
+        <input type="text" placeholder="gurdian-name" formControlName = "gurdianName"/>
+        <input type="text" placeholder="gurdian-surname" formControlName = "gurdianSurname"/>
+        <input type="text" placeholder="guardian-cell-phone-number" formControlName = "gurdianCellphoneNo"/>
+        <label>proofOfPayment</label>
+        <input type="file"    id="file" >
+        <button type="submit">submit</button>
+        <button (click)="onCancel()">Cancel</button>
+    </form>
+</div>
+
+ 

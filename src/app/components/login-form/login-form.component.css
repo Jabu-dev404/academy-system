@@ -1,0 +1,55 @@
+#login-form {
+    width: 400px;
+    height: 400px;
+    color: black;
+    border: solid  wheat;
+    border-radius: 20px;
+    margin-left: 650px;
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+    border-left-color: #EFE4D2;
+    z-index: -1;
+}
+
+#login-form-header {
+    margin-top: 10px;
+    margin-left: 65px;
+
+}
+
+::placeholder{
+    text-align: center;
+}
+
+#header {
+    color: black;
+}
+
+#username {
+    font-weight: bolder;
+}
+
+#password {
+    font-weight: bolder;
+}
+
+#sign-up {
+    cursor: pointer;
+    font-weight: bolder;
+    margin-left: 160px;
+    margin-top: -46px;
+}
+
+#forgot-password {
+    cursor: pointer;
+    font-weight: bolder;
+    margin-top: 20px;
+    width: 150px;
+    height: 30px;
+    border: #384B70;
+     
+}
+
+
+

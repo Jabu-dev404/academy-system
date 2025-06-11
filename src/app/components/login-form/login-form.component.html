@@ -1,0 +1,33 @@
+
+<header id="header">
+       <h1>maths & Science Academy</h1>
+</header>
+
+
+
+<div id="login-form">
+<form (ngSubmit)="onSubmit()">
+  
+  <p id="login-form-header"><label ><h1>Login</h1></label></p>
+  <p>
+     <label id="username">username: </label>
+  <input type="email" name="username" [(ngModel)]="username" placeholder="email-address">
+  </p>
+  <p>
+      <label id="password">password: </label>
+  <input  name="password" [(ngModel)]="password" placeholder="password">
+  </p>
+  <button type="submit">submit</button>
+
+  <p id="forgot-password" ><label>forgot password?</label></p>
+  <p id="sign-up" (click)="onClick()"><label >sign-Up</label></p>
+  
+  
+  
+</form>
+<P>{{response}}</P>
+ 
+</div>
+<div>
+  <router-outlet/>
+</div>

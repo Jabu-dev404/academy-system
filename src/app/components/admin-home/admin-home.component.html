@@ -1,0 +1,23 @@
+ <header id="header">
+    <h1>Admin Home</h1>
+ </header>
+
+ <div id="options-box">
+   @for(option of getHomeMenuOptions; track option.id){
+      <div id="option" (click)="onClick(option.path)">
+         @if(option.name === "Applications"){
+             {{option.name + "(" + applications.length +")"}}
+         }@else {
+        
+            {{option.name}}
+
+         }
+
+      </div>
+   }
+ </div>
+
+
+ <div id="choosen-option-box">
+   <router-outlet/>
+ </div>

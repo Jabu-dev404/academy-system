@@ -1,0 +1,24 @@
+#header {
+    color: black;
+    margin-left: -100px;
+    z-index: -1;
+}
+
+#box {
+    width: 100%;
+    height: auto;
+    border: solid maroon;
+    z-index: -1;
+}
+
+#student {
+    width: 100%;
+    height: 40px;
+    border: solid maroon;
+    color: black;
+    z-index: -1;
+}
+
+span {
+    font-weight: bold;
+}

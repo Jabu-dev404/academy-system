@@ -1,0 +1,33 @@
+ <header id="header">
+    <h1>Student Portal</h1>
+ </header>
+
+ <div id="options">
+   @for(option of menu; track option.id) {
+      <div id="option" (click)="onClick(option.path!)">{{option.name}}</div>
+   }
+ </div>
+
+ <div id="personal-info">
+   <header>
+      <h2>My personal info</h2>
+   </header>
+
+   
+   <div id="profile-pic"></div>
+
+    <p id="name"><span >Name: </span></p>
+   
+     <p id="surname"><span >Surname: </span></p>
+   
+     <p id="id-no"><span >Id No: </span></p>
+    
+     <p  id="student-no"><span>Student No</span></p>
+
+     <p  id="dob"><span>Date of birth</span></p>
+    
+ </div>
+ 
+ <div id="choosen-option-box">
+   <router-outlet/>
+ </div>

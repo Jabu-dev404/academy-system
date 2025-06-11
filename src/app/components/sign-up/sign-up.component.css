@@ -1,0 +1,17 @@
+#sign-up-form {
+    width: 400px;
+    height: 400px;
+     color: black;
+    border: solid  wheat;
+    border-radius: 20px;
+     display: flex;
+    justify-content: center;
+    color: black;
+    margin-left: 280px;
+    margin-top: -400px;
+    border-right-color: #EFE4D2;
+}
+
+#header {
+    font-weight: bolder;
+}
