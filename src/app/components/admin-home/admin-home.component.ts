@@ -1,21 +1,26 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, input, OnInit } from '@angular/core';
 import { AdminService } from './AdminService.service';
 import { Router, RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-home',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormsModule],
   templateUrl: './admin-home.component.html',
   styleUrl: './admin-home.component.css'
 })
 export class AdminHomeComponent implements OnInit{
-  router = inject(Router)
-  service = inject(AdminService);
+  private router = inject(Router)
+  private service = inject(AdminService);
+  private isCaptureLesson = false
+  grade = 0;
+  subject = '';
 
 
   ngOnInit(): void {
-    this.service.getApplications()
+    this.service.getApplications();
+    this.service.getSubjects();
   }
   
 
@@ -24,13 +29,28 @@ export class AdminHomeComponent implements OnInit{
   }
 
   onClick(option:string) {
+    if(option === "capture-lesson1") {
+      this.isCaptureLesson = true
+    }
     this.router.navigate([option])
   }
 
-  get applications() {
-    return this.service.viewApplications;
-  } 
+  get numberOfAplications(){
+    return this.service.getNumberOfAplicatins
+  }
 
+  get subjects() {
+    return this.service.getOfferedSubjects
+  }
+
+  lessonSubmit() {
+    this.service.setLessonSubjectAndGrade(this.subject, this.grade);
+    this.router.navigate(["capture-lesson"]);
+  }
+ 
+  get getIsCaptureLesson() {
+    return this.isCaptureLesson;
+  }
   
 
 }

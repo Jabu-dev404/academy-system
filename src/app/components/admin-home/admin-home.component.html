@@ -1,12 +1,15 @@
- <header id="header">
+
+ <div id="header">
+    <header>
     <h1>Admin Home</h1>
  </header>
+ </div>
 
  <div id="options-box">
    @for(option of getHomeMenuOptions; track option.id){
       <div id="option" (click)="onClick(option.path)">
          @if(option.name === "Applications"){
-             {{option.name + "(" + applications.length +")"}}
+             {{option.name + "(" + numberOfAplications +")"}}
          }@else {
         
             {{option.name}}
@@ -15,7 +18,35 @@
 
       </div>
    }
+  
  </div>
+
+ @if (getIsCaptureLesson) {
+   <div id="lesson">
+   <form (ngSubmit)="lessonSubmit()">
+      <div id="subjects">
+       @for (subject1 of subjects; track subject1.id) {
+         <label>{{subject1.subjectName}}<input type="radio" name="subject" [value]="subject1.subjectName"  [(ngModel)]="subject"/></label>
+      }
+   </div>
+   
+   <div>
+      <select required="true" name="grade" [(ngModel)]="grade">
+         <option selected disabled hidden>grade</option>
+         <option>10</option>
+         <option>11</option>
+         <option>12</option>
+      </select>
+   </div>
+   <input type="submit">
+   </form>
+  </div>
+ }
+
+
+
+
+  
 
 
  <div id="choosen-option-box">

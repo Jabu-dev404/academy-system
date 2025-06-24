@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { AdminService } from '../admin-home/AdminService.service';
 import { Student } from '../student-home/Student.model';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-application-view',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLinkActive,RouterLink],
   templateUrl: './application-view.component.html',
   styleUrl: './application-view.component.css'
 })
@@ -23,6 +23,6 @@ export class ApplicationViewComponent {
     console.log(student)
    this.service.viewStudent(student)
 
-    this.router.navigate(["admin-home/applications/applicant-details"])
+    // this.router.navigate(["admin-home/applications/applicant-details"])
   }
 }

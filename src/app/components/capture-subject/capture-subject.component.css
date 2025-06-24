@@ -1,0 +1,60 @@
+#box {
+    width: 1200px;
+    height: 600px;
+    border: solid grey;
+    border-radius: 30px;
+    margin-left: -100px;
+    margin-top: -100px;
+    background-color: white;
+     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+           -2px -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#add-subject-form {
+    width: 248px;
+    height: auto;
+    margin-left: 20px;
+}
+
+#remove-subject-form {
+    width: 248px;
+    height: auto;
+    margin-left: 320px;
+    margin-top: -25px;
+}
+
+#capture-time-table-form {
+    width: 300px;
+    height: auto;
+    border: solid grey;
+    margin-left: 30px;
+    margin-top: 50px;
+    border-radius: 30px;
+     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          
+}
+
+::placeholder {
+    text-align: center;
+}
+
+label {
+    color: black;
+    position: absolute;
+    margin-left: 70px;
+}
+
+#time-table-details {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: auto;
+    margin-top: 60px;
+    margin-left: 50px;
+    gap: 30px;
+}
+
+#submit-time-table {
+    margin-left: 115px;
+    margin-top: 10px;
+}

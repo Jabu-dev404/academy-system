@@ -1,0 +1,59 @@
+<div id="table-box">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+         <div id="lesson-info">
+         <label>{{"Subject: " + getLessonSubjectName}}</label>
+         <label>{{"Grade: " + getLessonGrade}}</label>
+    <label>{{"Topic: "}} <input type="text" formControlName ="topic"/></label>
+    <label>{{"Sub-topic: "}} <input type="text" formControlName = "subTopic"/></label>
+    </div>
+   
+    <table id="table">
+       
+         
+            <div formArrayName="options">
+                 <thead>
+                     <th>no</th>
+                     <th>Name</th>
+                     <th>surname</th>
+                     <th>Present</th>
+                 </thead>
+
+                            <div *ngFor="let control of options.controls; let i = index">
+                                 <tbody>
+                               
+                                <th>{{"0"}}</th>
+                                <th> {{getAttendences[i].student!.name}}</th>
+                                <th> {{getAttendences[i].student!.surname}}</th>
+                                <th>
+                                    <input type="checkbox" [formControlName] = "i">
+
+                                </th>
+                                 </tbody>
+
+                            </div>
+                </div>
+         
+           
+                
+                            
+        
+            
+
+        
+            <!-- @for(attandance of getLessonStudents; track attandance.student!.id) {
+                <tbody>
+                     <th>{{"0"}}</th>
+                    <th>{{attandance.student!.name}}</th>
+                    <th>{{attandance.student!.surname}}</th>
+                    <th><input type="checkbox"/></th>
+                </tbody>
+                
+            } -->
+           
+    
+    </table>
+
+        <button type="submit">submit</button>
+    </form>
+   
+</div>

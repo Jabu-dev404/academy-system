@@ -1,0 +1,108 @@
+<div id="header"  >
+    <header>
+        <h1>
+            Admin dashboard
+        </h1>
+    </header>
+</div>
+
+<div id="box" >
+    <div id="input-bars">
+        <button >submit</button>
+        <input placeholder="search"/>
+          <button >submit</button>
+        <input placeholder="de-register"/>
+    </div>
+
+   <table >
+    <thead>
+      <th>No</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Id No</th>
+      <th>Date of Birth</th>
+      <th>Gender</th>
+      <th>Student No</th>
+      <th>Grade</th>
+      <th>Email</th>
+      <th>Action</th>
+   </thead>
+
+ 
+    @for(student of registeredStudents; track student.id) {
+          <tbody >
+      <th>01</th>
+      <th>{{student.name}}</th>
+      <th>{{student.surname}}</th>
+      <th>{{student.idNo}}</th>
+      <th>{{student.dOB}}</th>
+      <th>{{student.gender}}</th>
+      <th>{{student.studentNo}}</th>
+      <th>{{student.grade}}</th>
+      <th>{{student.emailAddress}}</th>
+      <th>
+       
+        <div id="drop-down" >
+            <button id="drop-down-btn" (click)="actionsClicked(student.name)">actions</button>
+            @if (student.name === getSelectedStudentName) {
+                 @if(getIsActions) {
+              @for(action of getActions; track action.id) {
+                <div (click)="onClick(student, action.name)" id="action">
+                    {{action.name}}
+                </div>
+               } 
+            }
+            }
+           
+           
+        </div>
+
+        </th>
+        @if(getIsCaptureResults){
+             @if (student.name === getSelectedStudentName) {
+                <div id="results-box"  >
+                    <label id="header2"><h3 >capture-results</h3></label>
+                    <form (ngSubmit)="onSubmit(student)" #parent >
+                         @for(subject of student.subjects ;track subject.id){
+                            <label class="myLabels">{{subject!.subjectName}} <input [value]="0" [name]="subject!.subjectName"  id="results-input"/></label>
+                     }
+                      <input type="date" name="date"  [(ngModel)] = "date"/>
+                      <label>Term</label>
+                     <select  name="term" [(ngModel)] = "term">
+                        <!-- <option selected disabled >choose term</option> -->
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option></option>
+                            </select>
+                      <input type="submit" id="btn"/>
+                    </form>
+                    
+                    </div> 
+               
+                
+                
+             }
+        }
+
+        @if(getIsCapturePayment) {
+             @if (student.name === getSelectedStudentName) {
+                <div id="payment-box"  >
+                    <h3 id="header2">capture-payment</h3>
+                    <form (ngSubmit)="onSubmitPayment(student)" > 
+                        <label>{{"Date: "}} <input type="date" name="enteredPaymentDate"  [(ngModel)] = "enteredPaymentDate"/></label> 
+                       <label id="payment-label">{{"Amount: "}}</label>
+                       <input type="number" name="enteredAmount"  [(ngModel)] = "enteredAmount"/>
+                       <input type="submit" id="btn"/>
+                    </form>
+                    </div>  
+             }
+        }
+       </tbody>
+    }
+     
+   
+</table>
+
+
+</div>

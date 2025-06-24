@@ -1,13 +1,13 @@
-<div id="form-box">
+ <div id="form-box">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <p  id="form-header"><label><h2>Registration form</h2></label></p>
        
         <input type="text" placeholder="name" id="" formControlName = "name"/>
         <input type="text" placeholder="surname" formControlName = "surname"/>
         <label for="male">male</label>
-        <input type="radio" placeholder="gender" value="male" name="gender" formControlName = "gender"/>
+        <input type="radio" placeholder="gender" value="MALE" name="gender" formControlName = "gender"/>
         <label for="male">female</label>
-        <input type="radio" placeholder="gender" value="female" name="gender" formControlName = "gender"/>
+        <input type="radio" placeholder="gender" value="FEMALE" name="gender" formControlName = "gender"/>
         <input type="date" placeholder="date-of-birth" formControlName = "date"/>
         <input type="text" placeholder="id-number" pattern="[0-9]" formControlName = "idNumber"/>
         <input type="tel" placeholder="cell-phone-number" formControlName = "cellPhoneNo"/> 
@@ -18,6 +18,55 @@
         <input type="text" placeholder="gurdian-name" formControlName = "gurdianName"/>
         <input type="text" placeholder="gurdian-surname" formControlName = "gurdianSurname"/>
         <input type="text" placeholder="guardian-cell-phone-number" formControlName = "gurdianCellphoneNo"/>
+
+          <div id="drop-down">
+            <button id="btn" type="button" (click)="dropDown()">Select subjects</button>
+            @if(isDropDown) {
+                <div id="drop-down-menu">
+                  <ul type="none">
+                    <div formArrayName="options">
+                            <div *ngFor="let control of options.controls; let i = index">
+                                <label>
+                                    <input type="checkbox" [formControlName] = "i">
+                                        {{subjects[i].subjectName}}
+                                </label>
+
+                            </div>
+                    </div>
+                
+        </ul>
+            </div>
+
+            <select  formControlName="grade">
+                <option value="" disabled selected hidden>Select Grade</option>
+                <option value="10">Grade 10</option>
+                <option value="11">Grade 11</option>
+                <option value="12">Grade 12</option>
+                
+            </select>
+            }
+
+            <div id="results" #parent>
+                <input type="date" formControlName="resultDate"/>
+                <label>{{"Term"}}
+                    <select formControlName="term">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                    </select>
+                </label>
+
+                @for(subject of  getChoosenSubjects; track subject.id) {
+                <Label>{{subject.subjectName}} <input [name]="subject.subjectName" type="number"/></Label>
+            }
+            </div>
+
+            <div id="payment">
+                <label>{{"Amount: "}}<input type="number" formControlName="payment"/></label>
+            </div>
+            
+        
+        </div>
         <button type="submit">submit</button>
         <button (click)="onCancel()">Cancel</button>
     </form>

@@ -2,19 +2,23 @@
     width: 400px;
     height: 400px;
     color: black;
-    border: solid  wheat;
+    border: solid  grey;
     border-radius: 20px;
     margin-left: 650px;
     margin-top: 250px;
     display: flex;
     justify-content: center;
-    border-left-color: #EFE4D2;
+    border-left-color: grey;
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+           -2px -2px 4px rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
 
 #login-form-header {
     margin-top: 10px;
     margin-left: 65px;
+    background-color: white;
 
 }
 
@@ -24,6 +28,10 @@
 
 #header {
     color: black;
+     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+           -2px -2px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 30px;
+            background-color: white;
 }
 
 #username {
@@ -49,6 +57,16 @@
     height: 30px;
     border: #384B70;
      
+}
+
+button {
+    border: solid grey;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: gray;
 }
 
 

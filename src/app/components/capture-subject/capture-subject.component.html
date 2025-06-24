@@ -1,0 +1,31 @@
+<div id="box">
+    <div id="add-subject-form">
+        <form  [formGroup]="form" (ngSubmit)="onAddSubmit()">
+            <button>Submit</button>
+            <input formControlName = "subjectName" [placeholder]="'add-subject'">
+        </form>
+    </div>
+
+    <div id="remove-subject-form">
+        <form  [formGroup]="form" (ngSubmit)="onRemoveSubmit()">
+            <button>Submit</button>
+            <input formControlName = "subjectName" [placeholder]="'remove-subject'">
+        </form>
+    </div>
+
+    <div id="capture-time-table-form">
+        <label><h3>Capture time-table</h3></label>
+
+        <form [formGroup]="form1" (ngSubmit)="onSubmit()">
+        <div id="time-table-details">
+            <input type="number" [placeholder]="'grade'" formControlName="grade"/>
+            <input type="text" [placeholder]="'subjectName'" formControlName="subject"/>
+            <input type="date" [placeholder]="'date'" formControlName="date"/>
+            <input type="time" [placeholder]="'time'" formControlName="time"/>
+        </div>
+        <button id="submit-time-table">Submit</button>
+    </form>
+    </div>
+
+    
+</div>

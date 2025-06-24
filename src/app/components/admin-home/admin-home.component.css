@@ -1,8 +1,13 @@
 #options-box {
     width: 400px;
     height: 200px;
-    border: solid wheat;
-    margin-top: 130px;
+    border: solid grey;
+    margin-top: 120px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
 }
 
 #option {
@@ -10,17 +15,37 @@
     justify-content: center;
     align-items: center;
     color: black;
-    border: solid maroon;
+    border: solid grey;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+           -2px -2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #choosen-option-box {
     width: 1100px;
     height: 300px;
-    border: solid wheat;
     margin-left: 600px;
     margin-top: -150px;
 }
 
 header {
     color: black;
+}
+
+#lesson {
+   
+    color: black;
+    z-index: 1;
+    width: 200px;
+    height: auto;
+    /* border: solid grey; */
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#subjects {
+    display: flex;
+    flex-direction: column;
+    width: 190px;
+    height: auto;
+    
 }

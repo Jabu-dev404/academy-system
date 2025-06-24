@@ -1,3 +1,5 @@
+import { MySubject } from "../../Subject.model";
+import { Transaction } from "../../Transaction.mode";
 import { User } from "../../User.model";
 
 export interface Student {
@@ -6,7 +8,8 @@ export interface Student {
     surname:string;
     gender:string;
     dOB:string;
-    emailAddress :string;
+    grade : number;
+     emailAddress :string;
      studentNo:string;
      idNo:string;
      streetName:string;
@@ -18,4 +21,6 @@ export interface Student {
      guardianSurname:string;
      guardianCellphoneNo:string;
     user?:User;
+    subjects?:MySubject[];
+    transactions? : Transaction[];
 }

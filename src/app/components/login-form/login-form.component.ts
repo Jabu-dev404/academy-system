@@ -14,12 +14,15 @@ export class LoginFormComponent {
    username = '';
   password = '';
   response = "";
+  loading = false;
   appService= inject(AppService);
   router = inject(Router)
  
 
    onSubmit(){
+    this.loading=true
     this.appService.login(this.username, this.password);
+    this.loading=false;
    }
 
    onClick() {

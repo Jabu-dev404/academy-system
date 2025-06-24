@@ -1,0 +1,119 @@
+#header {
+    color: black;
+}
+
+/* table {
+     
+    background-color: white;
+    
+} */
+
+thead {
+     border: solid black;
+     color: white;
+     background-color: #34374C;
+      
+}
+
+tbody{
+    color: gray;
+    border: solid grey;
+    
+}
+
+th{
+    width: 110px;
+     border: solid grey;
+}
+
+#box {
+    width: auto;
+    height: auto;
+     
+     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+           -2px -2px 4px rgba(0, 0, 0, 0.5);
+            
+    background-color: white;
+    margin-top: 30px;
+    margin-left: 10px;
+    
+}
+
+::placeholder {
+    color: grey;
+    text-align: center;
+}
+
+ 
+
+table {
+    margin-top: 50px;
+}
+
+
+#drop-down-btn {
+    width: 100px;
+    height: 15px;
+    font-size:12px ;
+}
+
+#action {
+    font-size: 15px;
+    cursor: pointer;
+     
+}
+
+#action:hover {
+    border: solid gray;
+}
+
+#drop-down {
+    display: flex;
+    flex-direction: column;
+}
+ 
+#results-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 340px;
+    border: solid grey;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+           -2px -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#results-input {
+    width: 195px;
+}
+
+#header2 {
+       margin-left: 26px;
+}
+
+.myLabels{
+    margin-left: 10px;
+}
+
+#btn {
+    margin-left: 65px;
+}
+
+#payment-box {
+    width: 200px;
+    height: 340px;
+    border: solid grey;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+           -2px -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#payment-label {
+   
+    margin-top: 30px;
+}
+
+
+
+  

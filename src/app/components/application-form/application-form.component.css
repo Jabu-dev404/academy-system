@@ -21,3 +21,12 @@
   #file {
     color: black;
   }
+
+  #results {
+    display: flex;
+    flex-direction: column;
+    border: solid grey;
+    
+  }
+
+  

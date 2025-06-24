@@ -1,0 +1,44 @@
+ thead {
+     border: solid black;
+     color: white;
+     background-color: #34374C;
+      
+}
+
+th{
+    width: 110px;
+     border: solid grey;
+}
+
+tbody{
+    color: gray;
+    border: solid grey;
+    
+}
+
+label {
+    color: black;
+    font-weight: bold;
+}
+
+table {
+    margin-top: 30px;
+}
+
+#table-box {
+    background-color: white;
+     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+           -2px -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#lesson-info {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: auto;
+    height: auto;
+}
+
+#table-box {
+    width: auto;
+}

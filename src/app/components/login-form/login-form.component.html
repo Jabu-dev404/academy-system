@@ -1,8 +1,11 @@
 
-<header id="header">
+
+<div id="header">
+<header>
        <h1>maths & Science Academy</h1>
 </header>
-
+ 
+</div>
 
 
 <div id="login-form">
@@ -22,11 +25,10 @@
   <p id="forgot-password" ><label>forgot password?</label></p>
   <p id="sign-up" (click)="onClick()"><label >sign-Up</label></p>
   
-  
-  
 </form>
-<P>{{response}}</P>
- 
+@if (loading) {
+  <p id="loading">loading</p>
+}
 </div>
 <div>
   <router-outlet/>

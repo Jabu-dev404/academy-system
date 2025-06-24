@@ -1,0 +1,39 @@
+
+<div id="box">
+    <div class="div" (click)="onClick('registered-student')"> 
+        <div id="circle" ></div>
+        <p id="registered-text">Registered students</p>
+        <span>{{numberOfRegisteredStudents}}</span>
+    </div>
+
+    <div class="div" (click)="onClick('males')"> 
+        <div id="circle"></div>
+        <p id="male-text">Males</p>
+        <span>{{numberOfMales}}</span>
+    </div>
+
+    <div class="div" (click)="onClick('females')"> 
+        <div id="circle"></div>
+        <p id="female-text">Females</p>
+        <span>{{numberOfFemales}}</span>
+    </div>
+
+    <div class="div" (click)="onClick('grade-12')"> 
+        <div id="circle"></div>
+        <p class="number-of-text">Number of G12 students</p>
+        <span>{{numberOfGradeTwelves}}</span>
+    </div>
+
+    <div class="div" (click)="onClick('grade-11')"> 
+        <div id="circle"></div>
+        <p class="number-of-text">Number of G11 students</p>
+        <span>{{numberOfGradeElevens}}</span>
+    </div>
+
+    <div class="div" (click)="onClick('grade-10')"> 
+        <div id="circle"></div>
+        <p class="number-of-text">Number of G10 students</p>
+        <span>{{numberOfGradeTens}}</span>
+    </div>
+     
+</div>
